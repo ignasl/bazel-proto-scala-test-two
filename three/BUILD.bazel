@@ -1,0 +1,12 @@
+load("@io_bazel_rules_scala//scala_proto:scala_proto.bzl", "scalapb_proto_library")
+
+proto_library(
+	name = "proto",
+	srcs = ["three.proto"],
+	strip_import_prefix = "/" + package_name()
+)
+
+scalapb_proto_library(
+	name = "proto_scala",
+	deps = [":proto"]
+)
