@@ -6,7 +6,7 @@ proto_library(
 	name = "proto",
 	srcs = glob(["**/*.proto"]),
 	strip_import_prefix = "/" + package_name(),
-	deps = [ "@bazel_proto_scala_test_one//a/b/one/src/main/proto:proto" ]
+	deps = [ "@bazel_proto_scala_test_one//module/submodule/one/src/main/proto:proto" ]
 )
 
 scalapb_proto_library(

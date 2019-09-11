@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "com/test/bazel/one.proto";
+import "one.proto";
 
 message TwoMessage {
 	string message = 1;
