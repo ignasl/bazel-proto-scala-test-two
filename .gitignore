@@ -1,3 +1,5 @@
 *.class
 *.log
 bazel-*
+.idea
+.bazelproject
