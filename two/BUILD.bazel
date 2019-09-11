@@ -5,16 +5,19 @@ proto_library(
 	name = "proto",
 	srcs = ["two.proto"],
 	strip_import_prefix = "/" + package_name(),
+	visibility = [ "//visibility:public" ],
 	deps = [ "@bazel_proto_scala_test_one//one:proto" ]
 )
 
 scalapb_proto_library(
 	name = "proto_scala",
-	deps = [":proto"]
+	deps = [":proto"],
+	visibility = [ "//visibility:public" ],
 )
 
 scala_library(
 	name = "two",
 	srcs = ["two.scala"],
-	deps = [ ":proto_scala" ]
+	deps = [ ":proto_scala" ],
+	visibility = [ "//visibility:public" ],
 )
