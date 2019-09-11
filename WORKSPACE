@@ -50,5 +50,5 @@ http_archive(
 git_repository(
     name = "bazel_proto_scala_test_one",
     remote = "git@github.com:ignasl/bazel-proto-scala-test-one.git",
-    commit = "d47a8fd9e6827b2d12b8b9a473bdedc13cb5ab7f"
+    commit = "cd244f67f2773484d6c2544f32bd7692c47cbf94"
 )
