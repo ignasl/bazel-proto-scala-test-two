@@ -1,4 +1,4 @@
-workspace(name = "bazel_proto_scala_test_one")
+workspace(name = "bazel_proto_scala_test_two")
 
 rules_scala_version="0d8b2d720277cbbadd804b2ef39ecf2a92cd7278"
 scala_version = "2.12.8"
@@ -45,4 +45,10 @@ http_archive(
     type = "tar.gz",
     url = "https://github.com/bazelbuild/bazel-skylib/releases/download/{}/bazel-skylib.{}.tar.gz".format (skylib_version, skylib_version),
     sha256 = "2ef429f5d7ce7111263289644d233707dba35e39696377ebab8b0bc701f7818e",
+)
+
+git_repository(
+    name = "bazel_proto_scala_test_one",
+    remote = "git@github.com:ignasl/bazel-proto-scala-test-one.git",
+    commit = "d47a8fd9e6827b2d12b8b9a473bdedc13cb5ab7f"
 )
